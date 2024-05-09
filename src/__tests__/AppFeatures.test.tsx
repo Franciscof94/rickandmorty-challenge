@@ -1,12 +1,8 @@
-// Importamos lo necesario para los tests
 import { render, fireEvent, waitFor, RenderResult } from '@testing-library/react';
 import { getCharacter } from 'src/actions/getCharacter';
 import { Results } from '../../src/components/Results';
 import Pagination from '../components/Pagination';
 import { SearchBar } from '../components/SearchBar';
-
-
-
 
 
 jest.mock('../../src/actions/getCharacter', () => ({
@@ -19,7 +15,6 @@ jest.mock('../../src/actions/getCharacter', () => ({
 
 const mockHandleSetNewData = jest.fn();
 
-// Mock de los datos de props necesarios para el componente Pagination
 const mockProps = {
   currentPage: 1,
   totalPages: 5,
